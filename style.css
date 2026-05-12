@@ -183,17 +183,73 @@ html {
 
 /* ========== SECTION CONTACT ========== */
 #contact {
+  position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 80px 20px;
-  background-color: #222;
+  overflow: hidden;
   color: white;
 }
 
+.parallax-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("img/alt gothic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+  filter: blur(4px);
+}
+
+.contact-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 10px;
+  background: rgba(160, 154, 154, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.contact-container h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--crimson-deep);
+  color: white;
+  cursor: pointer;
+}
 /* ========== TYPOGRAPHIE ========== */
 .parallax-section h1,
 #contact h2 {
@@ -209,7 +265,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: var(--crimson-soft);
+  color: var(--crimson-deep);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
